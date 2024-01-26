@@ -26,7 +26,7 @@ Not only does every repo need to have a **captain-definition** file, but every r
     "url": "Webhook to post to (Can be gotten from the app inside CapRover, same way you would get the GitHub webhook URL)"
 }
 ```
-**DO NOT PUT A PUBLICALLY ACCESSIBLE WEBHOOK URL, PUT ONE THAT CAN ONLY BE ACCESSED VIA LOCAL NETWORK OR VPN (TailScale) **
+**DO NOT PUT A PUBLICALLY ACCESSIBLE WEBHOOK URL, PUT ONE THAT CAN ONLY BE ACCESSED VIA LOCAL NETWORK OR VPN (TailScale)**
 
 # Contributing
 All pull requests are welcome, any suggestions are welcome too.
