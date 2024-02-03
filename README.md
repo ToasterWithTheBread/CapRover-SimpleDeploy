@@ -15,6 +15,8 @@ TELEGRAM_CHAT_ID = "Chat ID for the bot to use (Send a message to @getmyid_bot t
 
 USER = "GitHub username where all the repos are"
 REPOS = "List of repos to monitor (Eg: Test1,Test2,Test3)"
+
+POLL_RATE = "Every (x) minutes to pull for new commits"
 ```
 
 The Telegram bot token is optional, but its recommended.
