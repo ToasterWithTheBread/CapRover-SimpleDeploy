@@ -20,8 +20,8 @@ async function log(text) {
 }
 
 async function isWithin5Minutes(isoTimestamp) {
-    // Ugly function to decide if the commit is within or is 5 mins ago
-    const within = (new Date() - new Date(isoTimestamp)) <= 5 * 60 * 1000
+    // Ugly function to decide if the commit is within or is the specified poll rate
+    const within = (new Date() - new Date(isoTimestamp)) <= parseInt(process.env.POLL_RATE) * 60 * 1000
     return within
 }
 
