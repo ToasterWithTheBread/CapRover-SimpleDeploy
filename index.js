@@ -59,7 +59,7 @@ async function run() {
 
 console.log("🎉 Successfully started the monitor!")
 
-cron.schedule('*/5 * * * *', () => {
+cron.schedule(`*/${process.env.POLL_RATE} * * * *`, () => {
     console.log("⌚ Polling for new commits!")
     run()
 });
