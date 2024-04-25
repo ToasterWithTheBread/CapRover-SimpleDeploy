@@ -39,10 +39,7 @@ async function run() {
 
                 try {
                     // Getting the webhook URL from the file in the repo
-                    let webhook_file = await axios({
-                        method: "get",
-                        url: `https://raw.githubusercontent.com/${user}/${repo_name}/main/captain-webhook`,
-                    });
+                    let webhook_file = await axios({method: "get", url: `https://raw.githubusercontent.com/${user}/${repo_name}/main/captain-webhook` });
                     let webhook_request = await axios({ method: "post", url: webhook_file.data.url });
 
                     if (webhook_request.data.status === 100) {
@@ -51,7 +48,7 @@ async function run() {
                         log(`❌ Error sending deploy request for ${repo_name}`);
                     }
                 } catch {
-                    log(`⚠️ No captain-webhook file found in ${repo_name}`);
+                    log(`💀 No captain-webhook file found in ${repo_name}`);
                 }
             }
         }
